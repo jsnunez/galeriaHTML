@@ -1,0 +1,410 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para el header */
+header {
+    background: white;
+    color: black;
+    padding: 1rem 0;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header cubra todo el ancho */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+   
+    color: #007bff;
+}
+
+/* Botón de menú para móviles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #cfebdc; /* Cambiar a un color oscuro para mejor contraste */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px; /* Añadir algo de espacio alrededor del botón */
+}
+
+/* Ocultar el menú móvil por defecto */
+.mobile-menu {
+    display: none;
+    position: fixed; /* Cambiar a fixed para que siempre esté visible en la pantalla */
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: #fff; /* Fondo blanco para el menú */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más suave para un efecto sutil */
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    padding: 20px; /* Añadir padding para un espaciado interior más agradable */
+}
+
+/* Menú activo */
+.mobile-menu.active {
+    display: block;
+    transform: translateX(0);
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+    background: #eea29b; /* Color llamativo pero elegante */
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 5px; /* Espacio desde el borde superior */
+    right: 5px; /* Espacio desde el borde derecho */
+    border-radius: 50%; /* Hacer el botón redondeado */
+    width: 30px; /* Tamaño del botón */
+    height: 30px; /* Tamaño del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para los enlaces del menú móvil */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav-links li {
+    margin: 1rem 0;
+}
+
+.mobile-nav-links a {
+    color: white; /* Color de texto oscuro para contraste */
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px; /* Bordes redondeados para un toque suave */
+    transition: background 0.3s ease; /* Transición suave para el fondo */
+}
+
+.mobile-nav-links a:hover {
+    background: #f1f1f1; /* Color de fondo suave en hover */
+}
+
+/* Ocultar nav-links en móviles y mostrar menú */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: contents;
+  
+    }
+}
+
+/* Hero Section and Other Styles */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 2rem;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons a {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons a:hover {
+    background-color: white;
+    color: black;
+}
+
+.colecciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.coleccion-item {
+    perspective: 1000px;
+    width: 30vw;
+    max-width: 300px;
+    height: 300px;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.coleccion-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    background-color: blue;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subtexto {
+    padding: 0.5rem;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+ 
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        padding: 20px;
+    }
+
+   
+
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-links li {
+        margin: 1rem 0;
+    }
+
+    .mobile-nav-links a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: block;
+        padding: 1rem;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .mobile-nav-links a:hover {
+        background: #f1f1f1;
+    }
+}
+
+
+.visit-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.visit-item {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.visit-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.visit-item p {
+    margin: 5px 0;
+}
+
+h2{
+text-align: center;}

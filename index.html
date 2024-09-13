@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLands Museum of Art</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to CSS -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Museo De La Actualidad</div>
+            <ul class="nav-links">
+                <li><a href="#Exhibition">Exhibitions</a></li>
+                <li><a href="#inicio">Gallery</a></li>
+                <li><a href="#plan-your-visit">Visit</a></li>
+            </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button> <!-- Menú Toggle -->
+
+            <div class="mobile-menu">
+                <button class="close-btn" onclick="toggleMenu()">&#10006;</button> <!-- Cerrar Menú -->
+                <ul class="mobile-nav-links">
+                    <li><a href="#Exhibition">Exhibitions</a></li>
+                    <li><a href="#inicio">Gallery</a></li>
+                   
+                    <li><a href="#plan-your-visit">Visit</a></li>
+                </ul>
+            </div>
+    </header>
+
+
+    <section class="hero-section" id ="Exhibition">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="img/imagen1.jpg" alt="Image of an artwork in the museum">
+                <img src="img/imagen2.jpg" alt="Another image of artwork in the museum">
+                <img src="img/imagen3.jpg" alt="Another artwork displayed in the museum">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="hero-content">
+            <h1 id="titulo">Welcome to the CampusLands Museum of Art</h1>
+            <p id="contenido">Explore centuries of creativity and human expression through our vast collection of masterpieces.</p>
+            <div class="buttons">
+                <a href="#plan-your-visit">Plan Your Visit</a>
+                <a href="#inicio">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="inicio">
+        <div class="destacados">
+            <h2 style="text-align: center;">Art Gallery</h2>
+            <div class="colecciones">
+                <!-- Collection Cards -->
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra1.jpg" alt="Artwork Collection 1">
+                        </div>
+                        <div class="card-back">
+                            <h3>Golden Autumn River</h3>
+                            <div class="subtexto">
+                                <p>A serene river flows through a forest ablaze with the rich hues of autumn. The golden leaves shimmer in the sunlight, creating a peaceful and reflective ambiance..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra2.jpg" alt="Artwork Collection 2">
+                        </div>
+                        <div class="card-back">
+                            <h3>Solitude by the Lake</h3>
+                            <div class="subtexto">
+                                <p>A lone wooden boat rests by the calm waters of a tranquil lake. The autumn trees reflect vividly on the surface, inviting a moment of solitude and quiet contemplation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra3.jpg" alt="Artwork Collection 3">
+                        </div>
+                        <div class="card-back">
+                            <h3>Cabin at Sunset</h3>
+                            <div class="subtexto">
+                                <p>As the sun sets, a cozy cabin by the lakeside is bathed in golden light. The peaceful scene, enhanced by the calm water and gentle breeze, offers a perfect retreat into nature.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra4.jpg" alt="Artwork Collection 3">
+                        </div>
+                        <div class="card-back">
+                            <h3>Mountain Stream Serenity</h3>
+                            <div class="subtexto">
+                                <p>A gentle mountain stream winds through a lush valley, surrounded by blooming flowers and towering pines. The beauty of the alpine landscape is captured in every detail of this natural haven.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra5.jpg" alt="Artwork Collection 3">
+                        </div>
+                        <div class="card-back">
+                            <h3>Forest Reflection</h3>
+                            <div class="subtexto">
+                                <p>The vibrant colors of the fall forest are mirrored in the still waters of a serene lake. A small boat awaits, offering the promise of a tranquil journey through nature's beauty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coleccion-item">
+                    <div class="card">
+                        <div class="card-front">
+                            <img src="img/obra6.jpg" alt="Artwork Collection 3">
+                        </div>
+                        <div class="card-back">
+                            <h3>Countryside Cottage</h3>
+                            <div class="subtexto">
+                                <p>Nestled in a picturesque valley, a quaint cottage stands by a meandering stream. The peaceful landscape of blooming flowers and towering mountains offers a perfect escape from the hustle and bustle of daily life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="plan-your-visit">
+        <h2>Plan Your Visit</h2>
+        <div class="visit-info">
+            <div class="visit-item">
+                <h3>Opening Hours</h3>
+                <p>Tuesday - Sunday: 10am - 5pm</p>
+                <p>Closed on Mondays</p>
+            </div>
+            <div class="visit-item">
+                <h3>Location</h3>
+                <p>calle 21#18-97</p>
+                <p>Bucaramanga, santander</p>
+            </div>
+            <div class="visit-item">
+                <h3>Current Exhibition</h3>
+                <p>"Paisajes "</p>
+                <p>Until octuber 15, 2024</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 CampusLands Museum of Art. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/scripts.js"></script> 
+</body>
+
+</html>
